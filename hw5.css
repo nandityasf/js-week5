@@ -1,0 +1,32 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: antiquewhite; 
+    background: linear-gradient(to right, white, antiquewhite);
+    
+}
+
+button{
+    padding: 5px;
+    border-style: hidden;
+    
+}
+ .tab{
+    color: chocolate;
+    justify-content: center;
+ }
+
+ .tab1:hover{
+    background-color: aliceblue;
+ }
+ .tab2:hover{
+    background-color: aliceblue;
+ }
+ .buttonSubmit:hover{
+    background-color: aliceblue;
+    padding: 5px;
+ }
+
+ form{
+    max-width: fit-content;
+    margin: auto;
+ }
