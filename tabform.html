@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Week 5</title>
+    <link rel="stylesheet" href="hw5.css">
+</head>
+<body>
+    <div class="tab">
+    <button class="tab1" onclick="open('registrasi')">Registrasi</button>
+    <button class="tab2" onclick="open('list')">List Pendaftar</button>
+</div>
+
+<div
+id='registrasi' class="tabcontent">
+<h1><u>Registrasi</u></h1>
+
+<form id="regisForm">
+<ul>
+<li>
+    <label for="name">Nama:</label>
+<input type="text" id="name" required minlength="10" placeholder="min 10 karakter">
+</li>
+
+<li>
+    <label for="age">Umur:</label>
+<input type="text" id="age" required minlength="25" placeholder="min 25thn">
+</li>
+
+<li>
+    <label for="money">Uang Saku:</label>
+<input type="text" id="money" required min="100" max="1000000" placeholder="100rb-1jt">
+</li>
+</ul>
+
+<button class="buttonSubmit" onclick="submit()">Submit</button>
+</form>
+</div>
+
+<div id="list" class="tabcontent">
+    <h1><u>List Pendaftar</u></h1>
+    <p id="resume"></p>
+    
+    <table id="tabPendaftar">
+        <thead>
+        <tr>
+            <th>Nama</th>
+            <th>Umur</th>
+            <th>Uang Saku</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="hw5.js"></script>
+
+</body>
+</html>
