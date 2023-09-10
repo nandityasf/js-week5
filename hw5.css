@@ -1,29 +1,36 @@
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: antiquewhite; 
-    background: linear-gradient(to right, white, antiquewhite);
+    background: linear-gradient(to right, white, rgb(178, 210, 178));
     
 }
+ table{
+   border-collapse: collapse;
+   width: 50%;
+ }
 
-button{
-    padding: 5px;
-    border-style: hidden;
-    
-}
- .tab{
-    color: chocolate;
+ th, td{
+   border: 1px;
+   padding: 5px;
+   text-align: center;
+ }
+
+ .tab-link{
+    color: rgb(231, 176, 103);
     justify-content: center;
  }
 
- .tab1:hover{
+ .tab-link:hover{
     background-color: aliceblue;
  }
- .tab2:hover{
-    background-color: aliceblue;
+ 
+ .tab-content{
+   color: rgb(231, 176, 103);
  }
- .buttonSubmit:hover{
-    background-color: aliceblue;
-    padding: 5px;
+ 
+ .button:hover{
+    background-color: rgb(231, 176, 103);
+   
  }
 
  form{
