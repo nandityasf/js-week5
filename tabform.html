@@ -3,56 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework Week 5</title>
+    <title>HW5</title>
     <link rel="stylesheet" href="hw5.css">
 </head>
 <body>
-    <div class="tab">
-    <button class="tab1" onclick="open('registrasi')">Registrasi</button>
-    <button class="tab2" onclick="open('list')">List Pendaftar</button>
-</div>
+   <!-- tabs regis dan list -->
+    <ul>
+        <li><a href="javascript:void(0);" class="tab-link" onclick="openTab('regis')">Registrasi</a></li>
+        <li><a href="javascript:void(0);" class="tab-link" onclick="openTab('list')">List Pendaftar</a></li>
+    </ul>
 
-<div
-id='registrasi' class="tabcontent">
-<h1><u>Registrasi</u></h1>
+  <!-- Tab Content -->
+  <div id="regis" class="tab-content">
+    <h2>Form Registrasi</h2>
+    <form id="registrationForm">
+      <label for="nama">Nama<sub>(min 10 karakter):</sub></label>
+      <input type="text" id="nama" name="nama" required><br><br>
 
-<form id="regisForm">
-<ul>
-<li>
-    <label for="name">Nama:</label>
-<input type="text" id="name" required minlength="10" placeholder="min 10 karakter">
-</li>
+      <label for="umur">Umur<sub>(min 25thn)</sub>:</label>
+      <input type="number" id="umur" name="umur" required><br><br>
 
-<li>
-    <label for="age">Umur:</label>
-<input type="text" id="age" required minlength="25" placeholder="min 25thn">
-</li>
+      <label for="uangSaku">Uang Saku<sub>(100rb-1jt)</sub>:</label>
+      <input type="number" id="uangSaku" name="uangSaku" required><br><br>
 
-<li>
-    <label for="money">Uang Saku:</label>
-<input type="text" id="money" required min="100" max="1000000" placeholder="100rb-1jt">
-</li>
-</ul>
 
-<button class="buttonSubmit" onclick="submit()">Submit</button>
-</form>
-</div>
+      <button class="button" type="button" onclick="validateForm()">Submit</button>
+    </form>
+  </div>
 
-<div id="list" class="tabcontent">
-    <h1><u>List Pendaftar</u></h1>
-    <p id="resume"></p>
-    
-    <table id="tabPendaftar">
-        <thead>
+  <div id="list" class="tab-content hidden">
+    <h2>List Pendaftar</h2>
+    <table id="pendaftarTable">
+      <thead>
         <tr>
-            <th>Nama</th>
-            <th>Umur</th>
-            <th>Uang Saku</th>
+          <th>Nama</th>
+          <th>Umur</th>
+          <th>Uang Saku</th>
         </tr>
-        </thead>
-        <tbody></tbody>
+      </thead>
+      <tbody id="pendaftarData">
+      </tbody>
     </table>
-</div>
+    <div id="resume">
+      <p>Rata-rata Umur Pendaftar: <span id="averageUmur">-</span></p>
+      <p>Rata-rata Uang Saku Pendaftar: <span id="averageUangSaku">-</span></p>
+    </div>
+  </div>
 
 <script src="hw5.js"></script>
 
